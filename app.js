@@ -39,3 +39,5 @@ app.post("/post", function(req, res) {
   };
   sgMail.send(msg);
 });
+
+module.exports = app;
