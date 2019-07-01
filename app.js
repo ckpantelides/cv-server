@@ -16,6 +16,10 @@ var port = process.env.PORT || 8000;
 server.listen(port);
 console.log("Server running on port " + port);
 
+app.get("/", function(req, res) {
+  res.sendFile(__dirname + "/index.html");
+});
+
 // when data received from client-side via axios
 app.post("/post", function(req, res) {
   // body-parser saves incoming data in req.body
