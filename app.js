@@ -24,8 +24,7 @@ app.get("/", function(req, res) {
 app.post("/post", function(req, res) {
   // body-parser saves incoming data in req.body
   const contact = req.body;
-  console.log("Message received");
-  console.log(contact.message);
+
   // sendgrid will send email to me with contact details
   const sgMail = require("@sendgrid/mail");
   sgMail.setApiKey(process.env.SENDGRID_API_KEY);
